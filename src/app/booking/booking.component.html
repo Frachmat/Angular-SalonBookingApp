@@ -1,0 +1,21 @@
+<div class="booking-container" [ngClass]="{'booked': isBooked}">
+    <div class="booking-container" [ngClass]="{'booked': isBooked}">
+        <img src="assets/haircut.jpg" alt="Haircut Logo" class="logo">
+
+    </div>
+
+    <h2>Rezerwacja terminu na strzyżenie</h2>
+    <p>Wybierz preferowany termin:</p>
+    <input type="date" [(ngModel)]="selectedDate">
+    <button (click)="bookAppointment()" [ngClass]="'disabled'">
+        Zarezerwuj
+    </button>
+    <p *ngIf="isBooked" class="confirmation">
+        Dziękujemy, termin zarezerwowany na {{ selectedDate | date }}
+    </p>
+    <div>
+        <img src="https://www.kurshtml.edu.pl/index.html">
+    </div>
+
+
+</div>
